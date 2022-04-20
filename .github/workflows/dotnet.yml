@@ -1,0 +1,71 @@
+name: .NET
+
+on:
+  push:
+    branches: { master }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet 
+      
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Package
+    run: |
+      cd src/
+      dotnet new tool-manifest
+      dotnet tool install Amazon.Lambda.Tools
+      dotnet lambda package
+
+    - name: Upload Artifact
+    uses: actions/upload-artifact@v2
+      with: deploy-package.zip
+      path: src/bin/serverless/
+
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix: 
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: deploy-package.zip
+        path: src/bin/serverless
+
+      - name: Display Structure of downloaded files
+      run: ls -R
+      working-directory: src/bin/serverless
+
+      - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      
+      - name: Deploy
+      run: |
+        cd src/
+        npm install -g serverless
+        serverless deploy --stage production
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAUT_REGION: ${{ secres.AWS_DEFAULT_REGION }}
+
+
