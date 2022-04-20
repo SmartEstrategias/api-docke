@@ -19,7 +19,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Package
       run: |
-        cd src/
+        cd src
         dotnet new tool-manifest
         dotnet tool install Amazon.Lambda.Tools
         dotnet lambda package
@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifacts@v2
       with:
         name: deploy-package.zip
-        path: src/
+        path: src
   deploy: 
     name: deploy
     needs: build
