@@ -31,7 +31,7 @@ jobs:
           dotnet lambda package
 
       - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
         with: deploy-package.zip
         path: src/bin/serverless/
 
