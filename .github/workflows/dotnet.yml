@@ -24,10 +24,10 @@ jobs:
         dotnet tool install Amazon.Lambda.Tools
         dotnet lambda package
     - name: Upload Artifacts
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifacts@v2
       with:
-          name: deploy-package.zip
-          path: src/
+        name: deploy-package.zip
+        path: src/
   deploy: 
     name: deploy
     needs: build
