@@ -23,7 +23,7 @@ namespace newDockeNet.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(string id)
         {
             var getDpo = await dpoManager.GetDpoByIdAsync(id);
             return Ok(getDpo);
@@ -34,7 +34,7 @@ namespace newDockeNet.Controllers
         {
             DPOModel insertedDpo;
             insertedDpo = await dpoManager.InsertDpoAsync(newDpo);
-            return CreatedAtAction(nameof(Get), new { id = insertedDpo.Id }, insertedDpo);
+            return CreatedAtAction(nameof(Get), new { id = insertedDpo.DpoId }, insertedDpo);
         }
 
         [HttpPut]
@@ -46,7 +46,7 @@ namespace newDockeNet.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             await dpoManager.DeleteDpoAsync(id);
             return NoContent();

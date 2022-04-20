@@ -7,9 +7,9 @@ namespace newDockeNet.Manager.Managment
     public interface ICompanyManager
     {
         Task<IEnumerable<CompanyModel>> GetCompanyAsync();
-        Task<CompanyModel> GetCompanyByIdAsync(int id);
+        Task<CompanyModel> GetCompanyByIdAsync(string id);
         Task<CompanyModel> InsertCompanyAsync(NewCompanyModel newCompany);
         Task<CompanyModel> UpdateCompanyAsync(ChangeCompanyModel changeCompany);
-        Task<CompanyModel> DeleteCompanyAsync(int id);
+        Task<CompanyModel> DeleteCompanyAsync(string id);
     }
 }

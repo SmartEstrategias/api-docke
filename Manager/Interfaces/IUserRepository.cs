@@ -7,9 +7,9 @@ namespace newDockeNet.Manager.Interfaces
     public interface IUserRepository
     {
         Task<IEnumerable<UserModel>> GetUsersAsync();
-        Task<UserModel> GetUserByIdAsync(int id);
+        Task<UserModel> GetUserByIdAsync(string id);
         Task<UserModel> InsertUserAsync(UserModel user);
         Task<UserModel> UpdateUserAsync(UserModel user);
-        Task<UserModel> DeleteUserAsync(int id);
+        Task<UserModel> DeleteUserAsync(string id);
     }
 }

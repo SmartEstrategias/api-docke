@@ -7,9 +7,9 @@ namespace newDockeNet.Manager.Interfaces
     public interface ICompanyRepository
     {
         Task<IEnumerable<CompanyModel>> GetCompanyAsync();
-        Task<CompanyModel> GetCompanyByIdAsync(int id);
+        Task<CompanyModel> GetCompanyByIdAsync(string id);
         Task<CompanyModel> InsertCompanyAsync(CompanyModel company);
         Task<CompanyModel> UpdateCompanyAsync(CompanyModel company);
-        Task<CompanyModel> DeleteCompanyAsync(int id);
+        Task<CompanyModel> DeleteCompanyAsync(string id);
     }
 }

@@ -24,22 +24,22 @@ namespace newDockeNet.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(string id)
         {
             var getUser = await userManager.GetUserByIdAsync(id);
             return Ok(getUser);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] NewUserModel newUser)
+        public async Task<IActionResult> Post([FromForm] NewUserModel newUser)
         {
             UserModel insertedUser;
             insertedUser = await userManager.InsertUserAsync(newUser);
-            return CreatedAtAction(nameof(Get), new { id = insertedUser.Id }, insertedUser);
+            return CreatedAtAction(nameof(Get), new { id = insertedUser.UserId }, insertedUser);
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put([FromBody] ChangeUserModel changeUser)
+        public async Task<IActionResult> Put([FromForm] ChangeUserModel changeUser)
         {
             var updatedUser = await userManager.UpdateUserAsync(changeUser);
             if (updatedUser == null) return NotFound();
@@ -47,7 +47,7 @@ namespace newDockeNet.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             await userManager.DeleteUserAsync(id);
             return NoContent();

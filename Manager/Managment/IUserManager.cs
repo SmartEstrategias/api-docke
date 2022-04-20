@@ -7,9 +7,9 @@ namespace newDockeNet.Manager.Managment
     public interface IUserManager
     {
         Task<IEnumerable<UserModel>> GetUsersAsync();
-        Task<UserModel> GetUserByIdAsync(int id);
+        Task<UserModel> GetUserByIdAsync(string id);
         Task<UserModel> InsertUserAsync(NewUserModel newUser);
         Task<UserModel> UpdateUserAsync(ChangeUserModel changeUser);
-        Task<UserModel> DeleteUserAsync(int id);
+        Task<UserModel> DeleteUserAsync(string id);
     }
 }

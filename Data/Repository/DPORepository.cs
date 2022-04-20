@@ -20,7 +20,7 @@ namespace newDockeNet.Data.Repository
             return await context.DPOs.AsNoTracking().ToListAsync();
         }
 
-        public async Task<DPOModel> GetDpoByIdAsync(int id)
+        public async Task<DPOModel> GetDpoByIdAsync(string id)
         {
             return await context.DPOs.FindAsync(id);
         }
@@ -34,7 +34,7 @@ namespace newDockeNet.Data.Repository
 
         public async Task<DPOModel> UpdateDpoAsync(DPOModel dpo)
         {
-            var updatedDpo = await context.DPOs.FindAsync(dpo.Id);
+            var updatedDpo = await context.DPOs.FindAsync(dpo.DpoId);
 
             if (updatedDpo == null) return null;
 
@@ -43,7 +43,7 @@ namespace newDockeNet.Data.Repository
             return dpo;
         }
 
-        public async Task<DPOModel> DeleteDpoAsync(int id)
+        public async Task<DPOModel> DeleteDpoAsync(string id)
         {
             var deletedDpo = await context.DPOs.FindAsync(id);
 

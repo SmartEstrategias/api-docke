@@ -12,7 +12,7 @@ namespace newDockeNet.Data.Configurations
             //         .WithOne(p => p.DPO)
             //         .HasForeignKey<DPOModel>(p => p.UserId);
 
-            // builder.HasKey(p => p.UserId);
+            builder.HasKey(p => p.DpoId);
         }
     }
 }

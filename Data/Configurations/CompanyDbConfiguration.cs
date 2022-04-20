@@ -12,7 +12,7 @@ namespace newDockeNet.Data.Configurations
             //         .WithOne(p => p.Company)
             //         .HasForeignKey<CompanyModel>(p => p.UserId);
 
-            // builder.HasKey(p => p.UserId);
+            builder.HasKey(p => p.CompanyId);
         }
     }
 }

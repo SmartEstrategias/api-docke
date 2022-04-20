@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kwitko\\Desktop\\Programacao\\Angular.NET\\newDockeNet\\newDockeNet.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Coding\\AngularNet\\dockenet\\newDockeNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kwitko\\Desktop\\Programacao\\Angular.NET\\newDockeNet\\newDockeNet.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Coding\\AngularNet\\dockenet\\newDockeNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kwitko\\Desktop\\Programacao\\Angular.NET\\newDockeNet\\newDockeNet.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Coding\\AngularNet\\dockenet\\newDockeNet.csproj",
         "projectName": "newDockeNet",
-        "projectPath": "C:\\Users\\Kwitko\\Desktop\\Programacao\\Angular.NET\\newDockeNet\\newDockeNet.csproj",
-        "packagesPath": "C:\\Users\\Kwitko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kwitko\\Desktop\\Programacao\\Angular.NET\\newDockeNet\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Coding\\AngularNet\\dockenet\\newDockeNet.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Coding\\AngularNet\\dockenet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kwitko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

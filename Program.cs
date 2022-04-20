@@ -23,7 +23,18 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Docke API", Version = "v1" });
 });
 
+builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAnyOrigin", builder =>
+        {
+            // Allow "Access-Control-Allow-Origin: *" header
+            builder.AllowAnyOrigin();
+        });
+    });
+
 var app = builder.Build();
+
+app.UseCors("AllowAnyOrigin");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

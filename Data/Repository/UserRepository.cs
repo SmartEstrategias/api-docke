@@ -20,7 +20,7 @@ namespace newDockeNet.Data.Repository
             return await context.Users.AsNoTracking().ToListAsync();
         }
 
-        public async Task<UserModel> GetUserByIdAsync(int id)
+        public async Task<UserModel> GetUserByIdAsync(string id)
         {
             return await context.Users.FindAsync(id);
         }
@@ -34,7 +34,7 @@ namespace newDockeNet.Data.Repository
 
         public async Task<UserModel> UpdateUserAsync(UserModel user)
         {
-            var updatedUser = await context.Users.FindAsync(user.Id);
+            var updatedUser = await context.Users.FindAsync(user.UserId);
 
             if (updatedUser == null) return null;
 
@@ -43,7 +43,7 @@ namespace newDockeNet.Data.Repository
             return user;
         }
 
-        public async Task<UserModel> DeleteUserAsync(int id)
+        public async Task<UserModel> DeleteUserAsync(string id)
         {
             var deletedUser = await context.Users.FindAsync(id);
 

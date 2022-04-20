@@ -19,9 +19,8 @@ namespace newDockeNet.Migrations
 
             modelBuilder.Entity("newDockeNet.Core.Models.CompanyModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("CompanyId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
                         .HasColumnType("TEXT");
@@ -53,16 +52,18 @@ namespace newDockeNet.Migrations
                     b.Property<string>("State")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CompanyId");
 
                     b.ToTable("Companys");
                 });
 
             modelBuilder.Entity("newDockeNet.Core.Models.DPOModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("DpoId")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Branchline")
                         .HasColumnType("TEXT");
@@ -85,27 +86,38 @@ namespace newDockeNet.Migrations
                     b.Property<string>("Telephone")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("DpoId");
 
                     b.ToTable("DPOs");
                 });
 
             modelBuilder.Entity("newDockeNet.Core.Models.UserModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("CompanyId")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime?>("Birthday")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("DPOId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("CPF")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Cellphone")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("EmailSecondary")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telephone")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("createdAt")
@@ -114,32 +126,9 @@ namespace newDockeNet.Migrations
                     b.Property<DateTime?>("updatedAt")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.HasIndex("DPOId");
+                    b.HasKey("UserId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("newDockeNet.Core.Models.UserModel", b =>
-                {
-                    b.HasOne("newDockeNet.Core.Models.CompanyModel", "Company")
-                        .WithMany()
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("newDockeNet.Core.Models.DPOModel", "DPO")
-                        .WithMany()
-                        .HasForeignKey("DPOId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Company");
-
-                    b.Navigation("DPO");
                 });
 #pragma warning restore 612, 618
         }

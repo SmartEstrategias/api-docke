@@ -22,7 +22,7 @@ namespace newDockeNet.Manager.Implementations
             return await dpoRepository.GetDpoAsync();
         }
 
-        public async Task<DPOModel> GetDpoByIdAsync(int id)
+        public async Task<DPOModel> GetDpoByIdAsync(string id)
         {
             return await dpoRepository.GetDpoByIdAsync(id);
         }
@@ -39,7 +39,7 @@ namespace newDockeNet.Manager.Implementations
             return await dpoRepository.UpdateDpoAsync(dpo);
         }
 
-        public async Task<DPOModel> DeleteDpoAsync(int id)
+        public async Task<DPOModel> DeleteDpoAsync(string id)
         {
             return await dpoRepository.DeleteDpoAsync(id);
         }

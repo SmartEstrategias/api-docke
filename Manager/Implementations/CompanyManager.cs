@@ -22,7 +22,7 @@ namespace newDockeNet.Manager.Implementations
             return await companyRepository.GetCompanyAsync();
         }
 
-        public async Task<CompanyModel> GetCompanyByIdAsync(int id)
+        public async Task<CompanyModel> GetCompanyByIdAsync(string id)
         {
             return await companyRepository.GetCompanyByIdAsync(id);
         }
@@ -39,7 +39,7 @@ namespace newDockeNet.Manager.Implementations
             return await companyRepository.UpdateCompanyAsync(company);
         }
 
-        public async Task<CompanyModel> DeleteCompanyAsync(int id)
+        public async Task<CompanyModel> DeleteCompanyAsync(string id)
         {
             return await companyRepository.DeleteCompanyAsync(id);
         }

@@ -20,7 +20,7 @@ namespace newDockeNet.Data.Repository
             return await context.Companys.AsNoTracking().ToListAsync();
         }
 
-        public async Task<CompanyModel> GetCompanyByIdAsync(int id)
+        public async Task<CompanyModel> GetCompanyByIdAsync(string id)
         {
             return await context.Companys.FindAsync(id);
         }
@@ -34,7 +34,7 @@ namespace newDockeNet.Data.Repository
 
         public async Task<CompanyModel> UpdateCompanyAsync(CompanyModel company)
         {
-            var updateCompany = await context.Companys.FindAsync(company.Id);
+            var updateCompany = await context.Companys.FindAsync(company.CompanyId);
 
             if (updateCompany == null) return null;
 
@@ -43,7 +43,7 @@ namespace newDockeNet.Data.Repository
             return company;
         }
 
-        public async Task<CompanyModel> DeleteCompanyAsync(int id)
+        public async Task<CompanyModel> DeleteCompanyAsync(string id)
         {
             var deletedCompany = await context.Companys.FindAsync(id);
 

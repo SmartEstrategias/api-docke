@@ -23,7 +23,7 @@ namespace newDockeNet.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(string id)
         {
             var getCompany = await companyManager.GetCompanyByIdAsync(id);
             return Ok(getCompany);
@@ -34,7 +34,7 @@ namespace newDockeNet.Controllers
         {
             CompanyModel insertedCompany;
             insertedCompany = await companyManager.InsertCompanyAsync(newCompany);
-            return CreatedAtAction(nameof(Get), new { id = insertedCompany.Id }, insertedCompany);
+            return CreatedAtAction(nameof(Get), new { id = insertedCompany.CompanyId }, insertedCompany);
         }
 
         [HttpPut]
@@ -46,7 +46,7 @@ namespace newDockeNet.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             await companyManager.DeleteCompanyAsync(id);
             return NoContent();

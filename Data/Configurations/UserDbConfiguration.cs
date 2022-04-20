@@ -8,13 +8,7 @@ namespace newDockeNet.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<UserModel> builder)
         {
-            // builder.HasOne(p => p.DPO)
-            //         .WithOne(p => p.User)
-            //         .HasForeignKey<UserModel>(p => p.DPOId);
-
-            // builder.HasOne(p => p.Company)
-            //         .WithOne(p => p.User)
-            //         .HasForeignKey<UserModel>(p => p.CompanyId);
+            builder.HasKey(p => p.UserId);
         }
     }
 }

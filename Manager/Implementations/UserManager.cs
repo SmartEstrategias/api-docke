@@ -21,7 +21,7 @@ namespace newDockeNet.Manager.Implementations
         {
             return await userRepository.GetUsersAsync();
         }
-        public async Task<UserModel> GetUserByIdAsync(int id)
+        public async Task<UserModel> GetUserByIdAsync(string id)
         {
             return await userRepository.GetUserByIdAsync(id);
         }
@@ -35,7 +35,7 @@ namespace newDockeNet.Manager.Implementations
             var user = mapper.Map<UserModel>(changeUser);
             return await userRepository.UpdateUserAsync(user);
         }
-        public async Task<UserModel> DeleteUserAsync(int id)
+        public async Task<UserModel> DeleteUserAsync(string id)
         {
             return await userRepository.DeleteUserAsync(id);
         }

@@ -7,7 +7,7 @@ namespace newDockeNet.Manager.Validators.User
     {
         public ChangeUserValidator()
         {
-            RuleFor(x => x.Id).NotEmpty();
+            RuleFor(x => x.UserId).NotEmpty();
         }
     }
 }
