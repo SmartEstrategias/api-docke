@@ -11,18 +11,14 @@ jobs:
 
       steps:
       - uses: actions/checkout@v3
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 6.0.x
-
+          dotnet-version: 6.0.
       - name: Restore dependencies
-        run: dotnet 
-        
+        run: dotnet    
       - name: Build
         run: dotnet build --no-restore
-
       - name: Package
         run: |
           cd src/
@@ -34,7 +30,6 @@ jobs:
         with: 
           name: deploy-package.zip 
           path: src/bin/serverless/
-
     deploy:
       name: deploy
       needs: build
@@ -49,16 +44,13 @@ jobs:
         with:
           name: deploy-package.zip
           path: src/bin/serverless
-
       - name: Display Structure of downloaded files
       run: ls -R
       working-directory: src/bin/serverless
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        
       - name: Deploy
       run: |
         cd src/
