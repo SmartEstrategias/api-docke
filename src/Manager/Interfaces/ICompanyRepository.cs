@@ -1,8 +1,8 @@
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using src.newDockeNet.Core.Models;
 
-namespace newDockeNet.Manager.Interfaces
+namespace src.newDockeNet.Manager.Interfaces
 {
     public interface ICompanyRepository
     {

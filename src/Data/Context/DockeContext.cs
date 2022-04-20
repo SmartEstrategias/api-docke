@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using newDockeNet.Core.Models;
-using newDockeNet.Data.Configurations;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Data.Configurations;
 
-namespace newDockeNet.Data.Context
+namespace src.newDockeNet.Data.Context
 {
     public class DockeContext : DbContext
     {

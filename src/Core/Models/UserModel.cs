@@ -1,4 +1,6 @@
-namespace newDockeNet.Core.Models
+using System;
+
+namespace src.newDockeNet.Core.Models
 {
     public class UserModel
     {

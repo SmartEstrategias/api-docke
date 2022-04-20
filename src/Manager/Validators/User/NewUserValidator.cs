@@ -1,7 +1,7 @@
 using FluentValidation;
-using newDockeNet.Core.ModelsViewNew;
+using src.newDockeNet.Core.ModelsViewNew;
 
-namespace newDockeNet.Manager.Validators.User
+namespace src.newDockeNet.Manager.Validators.User
 {
     public class NewUserValidator : AbstractValidator<NewUserModel>
     {

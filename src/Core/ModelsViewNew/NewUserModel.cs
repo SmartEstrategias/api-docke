@@ -1,6 +1,5 @@
-using newDockeNet.Core.Models;
-
-namespace newDockeNet.Core.ModelsViewNew
+using System;
+namespace src.newDockeNet.Core.ModelsViewNew
 {
     public class NewUserModel
     {

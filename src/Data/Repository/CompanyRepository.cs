@@ -1,11 +1,11 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
-using newDockeNet.Data.Context;
-using newDockeNet.Manager.Interfaces;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Data.Context;
+using src.newDockeNet.Manager.Interfaces;
 
-namespace newDockeNet.Data.Repository
+namespace src.newDockeNet.Data.Repository
 {
     public class CompanyRepository : ICompanyRepository
     {

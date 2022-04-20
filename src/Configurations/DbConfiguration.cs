@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using newDockeNet.Data.Context;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using src.newDockeNet.Data.Context;
 
-namespace newDockeNet.Configurations
+namespace src.newDockeNet.Configurations
 {
     public static class DbConfiguration
     {

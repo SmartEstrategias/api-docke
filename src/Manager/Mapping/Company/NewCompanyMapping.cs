@@ -1,8 +1,8 @@
 using AutoMapper;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Core.ModelsViewNew;
 
-namespace newDockeNet.Manager.Mapping.Company
+namespace src.newDockeNet.Manager.Mapping.Company
 {
     public class NewCompanyMapping : Profile
     {

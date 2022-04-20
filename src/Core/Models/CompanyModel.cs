@@ -1,4 +1,4 @@
-namespace newDockeNet.Core.Models
+namespace src.newDockeNet.Core.Models
 {
     public class CompanyModel
     {

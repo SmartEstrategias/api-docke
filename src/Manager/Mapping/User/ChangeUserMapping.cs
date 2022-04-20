@@ -1,8 +1,9 @@
+using System;
 using AutoMapper;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
 
-namespace newDockeNet.Manager.Mapping.User
+namespace src.newDockeNet.Manager.Mapping.User
 {
     public class ChangeUserMapping : Profile
     {

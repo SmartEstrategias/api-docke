@@ -1,8 +1,8 @@
 using AutoMapper;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
 
-namespace newDockeNet.Manager.Mapping.Company
+namespace src.newDockeNet.Manager.Mapping.Company
 {
     public class ChangeCompanyMapping : Profile
     {

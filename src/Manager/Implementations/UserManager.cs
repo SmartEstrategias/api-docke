@@ -1,11 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
-using newDockeNet.Manager.Interfaces;
-using newDockeNet.Manager.Managment;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Core.ModelsViewNew;
+using src.newDockeNet.Manager.Interfaces;
+using src.newDockeNet.Manager.Managment;
 
-namespace newDockeNet.Manager.Implementations
+namespace src.newDockeNet.Manager.Implementations
 {
     public class UserManager : IUserManager
     {

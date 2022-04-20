@@ -1,7 +1,8 @@
 using FluentValidation.AspNetCore;
-using newDockeNet.Manager.Validators.User;
+using Microsoft.Extensions.DependencyInjection;
+using src.newDockeNet.Manager.Validators.User;
 
-namespace newDockeNet.Configurations
+namespace src.newDockeNet.Configurations
 {
     public static class FluentValidationConfig
     {

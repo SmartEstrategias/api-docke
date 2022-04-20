@@ -1,6 +1,4 @@
-using newDockeNet.Core.Models;
-
-namespace newDockeNet.Core.ModelsViewNew
+namespace src.newDockeNet.Core.ModelsViewNew
 {
     public class NewDpoModel
     {

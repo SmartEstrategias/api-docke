@@ -1,8 +1,10 @@
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Core.ModelsViewNew;
 
-namespace newDockeNet.Manager.Managment
+namespace src.newDockeNet.Manager.Managment
 {
     public interface IDPOManager
     {

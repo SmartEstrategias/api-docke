@@ -1,8 +1,9 @@
-using newDockeNet.Manager.Mapping.Company;
-using newDockeNet.Manager.Mapping.DPO;
-using newDockeNet.Manager.Mapping.User;
+using Microsoft.Extensions.DependencyInjection;
+using src.newDockeNet.Manager.Mapping.Company;
+using src.newDockeNet.Manager.Mapping.DPO;
+using src.newDockeNet.Manager.Mapping.User;
 
-namespace newDockeNet.Configurations
+namespace src.newDockeNet.Configurations
 {
     public static class AutoMapperConfiguration
     {

@@ -1,9 +1,10 @@
-using newDockeNet.Data.Repository;
-using newDockeNet.Manager.Implementations;
-using newDockeNet.Manager.Interfaces;
-using newDockeNet.Manager.Managment;
+using Microsoft.Extensions.DependencyInjection;
+using src.newDockeNet.Data.Repository;
+using src.newDockeNet.Manager.Implementations;
+using src.newDockeNet.Manager.Interfaces;
+using src.newDockeNet.Manager.Managment;
 
-namespace newDockeNet.Configurations
+namespace src.newDockeNet.Configurations
 {
     public static class DependencyInjectionConfiguration
     {

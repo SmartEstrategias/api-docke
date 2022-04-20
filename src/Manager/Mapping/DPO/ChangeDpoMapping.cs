@@ -1,8 +1,8 @@
 using AutoMapper;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
 
-namespace newDockeNet.Manager.Mapping.DPO
+namespace src.newDockeNet.Manager.Mapping.DPO
 {
     public class ChangeDpoMapping : Profile
     {

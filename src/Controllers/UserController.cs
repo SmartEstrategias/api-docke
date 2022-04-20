@@ -1,10 +1,11 @@
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using newDockeNet.Core.ChangeModelsView;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
-using newDockeNet.Manager.Managment;
+using src.newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Core.ModelsViewNew;
+using src.newDockeNet.Manager.Managment;
 
-namespace newDockeNet.Controllers
+namespace src.newDockeNet.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

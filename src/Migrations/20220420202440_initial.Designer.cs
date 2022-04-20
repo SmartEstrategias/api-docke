@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using newDockeNet.Data.Context;
+using src.newDockeNet.Data.Context;
 
 #nullable disable
 
 namespace newDockeNet.Migrations
 {
     [DbContext(typeof(DockeContext))]
-    [Migration("20220420173412_initial")]
+    [Migration("20220420202440_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace newDockeNet.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
 
-            modelBuilder.Entity("newDockeNet.Core.Models.CompanyModel", b =>
+            modelBuilder.Entity("src.newDockeNet.Core.Models.CompanyModel", b =>
                 {
                     b.Property<string>("CompanyId")
                         .HasColumnType("TEXT");
@@ -62,7 +62,7 @@ namespace newDockeNet.Migrations
                     b.ToTable("Companys");
                 });
 
-            modelBuilder.Entity("newDockeNet.Core.Models.DPOModel", b =>
+            modelBuilder.Entity("src.newDockeNet.Core.Models.DPOModel", b =>
                 {
                     b.Property<string>("DpoId")
                         .HasColumnType("TEXT");
@@ -96,7 +96,7 @@ namespace newDockeNet.Migrations
                     b.ToTable("DPOs");
                 });
 
-            modelBuilder.Entity("newDockeNet.Core.Models.UserModel", b =>
+            modelBuilder.Entity("src.newDockeNet.Core.Models.UserModel", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("TEXT");

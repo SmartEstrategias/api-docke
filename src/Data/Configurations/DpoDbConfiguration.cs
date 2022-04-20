@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using newDockeNet.Core.Models;
+using src.newDockeNet.Core.Models;
 
-namespace newDockeNet.Data.Configurations
+namespace src.newDockeNet.Data.Configurations
 {
     public class DPODbConfiguration : IEntityTypeConfiguration<DPOModel>
     {

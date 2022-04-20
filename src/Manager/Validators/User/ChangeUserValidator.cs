@@ -1,7 +1,7 @@
 using FluentValidation;
-using newDockeNet.Core.ChangeModelsView;
+using src.newDockeNet.Core.ChangeModelsView;
 
-namespace newDockeNet.Manager.Validators.User
+namespace src.newDockeNet.Manager.Validators.User
 {
     public class ChangeUserValidator : AbstractValidator<ChangeUserModel>
     {

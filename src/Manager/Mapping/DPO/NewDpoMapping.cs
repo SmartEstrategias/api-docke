@@ -1,8 +1,8 @@
 using AutoMapper;
-using newDockeNet.Core.Models;
-using newDockeNet.Core.ModelsViewNew;
+using src.newDockeNet.Core.Models;
+using src.newDockeNet.Core.ModelsViewNew;
 
-namespace newDockeNet.Manager.Mapping.DPO
+namespace src.newDockeNet.Manager.Mapping.DPO
 {
     public class NewDpoMapping : Profile
     {
